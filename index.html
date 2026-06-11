@@ -1,143 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<title>Para Minha Princesa ❤️</title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Minha Princesa ❤️</title>
+
+<style>
+body{
+    background:#ffdbe8;
+    font-family:Arial,sans-serif;
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+h1,h2,h3{
+    text-align:center;
+}
+
+.barra-fundo{
+    width:100%;
+    height:30px;
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.barra{
+    width:0%;
+    height:100%;
+    background:#ff4d88;
+    transition:.1s;
+}
+
+.carta{
+    display:none;
+    background:white;
+    padding:25px;
+    margin-top:20px;
+    border-radius:20px;
+    box-shadow:0 0 15px rgba(0,0,0,.15);
+    line-height:1.8;
+}
+
+.heart{
+    position:fixed;
+    top:-20px;
+    z-index:9999;
+    animation:fall 5s linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+}
+</style>
 </head>
 
-<body style="background:#ffdde8;font-family:Arial;text-align:center;padding:20px;">
+<body>
+
+<div class="container">
 
 <h1>❤️ Carregando seu presente, Princesa... ❤️</h1>
 
-<div style="width:90%;height:30px;background:white;border-radius:20px;margin:auto;">
-<div id="barra" style="width:0%;height:30px;background:#ff4d88;border-radius:20px;"></div>
+<div class="barra-fundo">
+<div class="barra" id="barra"></div>
 </div>
 
-<p id="porcentagem">0%</p>
+<p id="porcentagem" style="text-align:center;">0%</p>
 
-<div id="carta" style="display:none;max-width:800px;margin:auto;background:white;padding:20px;border-radius:20px;box-shadow:0 0 15px rgba(0,0,0,0.2);text-align:left;">
+<div class="carta" id="carta">
 
-<h1 style="text-align:center;">💖 Para Minha Princesa 💖</h1>
+<h1>💖 Para Minha Princesa 💖</h1>
 
 <p>
-Meu amor, minha princesa, hoje é um dia muito especial para nós.
-Mesmo estando longe um do outro, quero que você saiba que meu coração está sempre pertinho de você.
+Meu amor, minha princesa...
+Hoje é um dia especial e eu queria transformar tudo aquilo que sinto por você em palavras.
+Mesmo com a distância entre nós, você consegue estar presente em todos os momentos da minha vida.
+Você está nos meus pensamentos quando eu acordo, durante o meu dia e antes de eu dormir.
 </p>
 
 <p>
-Desde o dia 09/01/2026 minha vida ficou mais bonita. Foi nesse dia que eu encontrei uma pessoa incrível, uma pessoa que me faz sorrir mesmo nos dias difíceis, que me faz sentir amado e que ocupa meus pensamentos todos os dias.
+Desde o dia 09/01/2026 minha vida ficou mais bonita.
+Você trouxe alegria para os meus dias, trouxe motivos para sorrir e fez meu coração encontrar um lugar onde ele se sente em paz.
 </p>
 
 <p>
-Princesa, talvez a distância não deixe eu te abraçar agora, não deixe eu segurar sua mão ou olhar nos seus olhos, mas ela nunca será capaz de diminuir o amor que sinto por você.
+Princesa, eu amo o seu jeito.
+Amo conversar com você.
+Amo ouvir sua voz.
+Amo cada momento que passamos juntos.
+Mesmo quando estamos longe, você consegue fazer eu me sentir perto.
 </p>
 
 <p>
-Todos os dias eu acordo pensando em você.
-Todos os dias eu durmo pensando em você.
-E entre cada momento do meu dia existe um pensamento chamado você.
+Você é a pessoa que eu penso quando algo bom acontece.
+É a pessoa que eu quero contar minhas conquistas.
+É a pessoa que eu procuro quando sinto saudade.
+É a pessoa que faz meu coração acelerar.
 </p>
 
 <p>
-Você se tornou alguém extremamente especial para mim.
-Sua voz me acalma.
-Seu sorriso me faz feliz.
-Seu jeito me encanta.
-Seu carinho me faz sentir a pessoa mais sortuda do mundo.
+Meu amor, talvez eu não consiga te abraçar agora.
+Talvez eu não consiga segurar sua mão neste momento.
+Mas quero que você saiba que meu carinho por você atravessa qualquer distância.
 </p>
 
 <p>
-Meu amor, eu sei que às vezes a saudade aperta.
-Eu sei que existem dias difíceis.
-Mas eu quero que você nunca esqueça que eu estou aqui.
-Sempre.
-Para te apoiar.
-Para te ouvir.
-Para cuidar de você.
-Para te amar.
+Eu admiro sua força.
+Admiro seu sorriso.
+Admiro seu coração.
+Admiro a pessoa incrível que você é.
+Cada detalhe seu faz eu me apaixonar ainda mais.
 </p>
 
 <p>
-Você é uma das melhores coisas que já aconteceram na minha vida.
-Você trouxe alegria para dias que pareciam sem graça.
-Você trouxe cor para momentos sem brilho.
-Você trouxe amor para o meu coração.
-</p>
-
-<p>
-Princesa, quando penso no futuro, imagino nós dois juntos.
-Imagino nossos abraços demorados.
+Princesa, quando penso no futuro, imagino você.
 Imagino nossos passeios.
 Imagino nossas risadas.
-Imagino todos os sonhos que ainda vamos realizar.
+Imagino nossos abraços demorados.
+Imagino os sonhos que ainda vamos realizar juntos.
 </p>
 
 <p>
-Mesmo que hoje exista distância, eu acredito que o nosso amor é maior que qualquer quilômetro.
-Porque amar não é apenas estar perto fisicamente.
-Amar é permanecer.
-É cuidar.
-É escolher a mesma pessoa todos os dias.
-E eu escolho você.
+Você se tornou uma parte muito importante da minha vida.
+E não existe um único dia em que eu não agradeça por ter você comigo.
 </p>
 
 <p>
-Escolho você nos dias bons.
-Escolho você nos dias difíceis.
-Escolho você quando estou feliz.
-Escolho você quando sinto saudade.
+Mesmo quando a saudade aperta, ela só me lembra o quanto você é especial para mim.
+Só me lembra o quanto eu quero continuar construindo momentos ao seu lado.
+</p>
+
+<p>
+Eu escolho você todos os dias.
+Nos dias bons.
+Nos dias difíceis.
+Nos momentos felizes.
+Nos momentos complicados.
 Escolho você hoje e escolheria você mil vezes de novo.
 </p>
 
 <p>
+Você é meu amor.
 Você é minha princesa.
-Meu amor.
-Meu sorriso favorito.
-Meu pensamento favorito.
-Meu lugar favorito.
+Você é meu sorriso favorito.
+Você é meu pensamento favorito.
+Você é alguém que eu quero ter sempre por perto.
 </p>
 
 <p>
 Obrigado por existir.
 Obrigado por cada mensagem.
 Obrigado por cada ligação.
-Obrigado por cada momento que compartilhamos.
-Obrigado por ser exatamente quem você é.
+Obrigado por cada sorriso.
+Obrigado por fazer parte da minha vida.
 </p>
 
 <p>
-Neste Dia dos Namorados quero que você saiba que eu te amo muito.
-Mais do que as palavras conseguem explicar.
-Mais do que esta carta consegue mostrar.
-Mais do que qualquer distância consegue separar.
-</p>
-
-<p>
-Se eu pudesse te dar um presente perfeito, eu daria um abraço bem apertado.
-Aquele abraço que faz o mundo inteiro desaparecer por alguns segundos.
-Mas enquanto isso não é possível, deixo aqui um pedacinho do meu coração.
-</p>
-
-<p>
-E sempre que você sentir saudade, lembre-se:
+Quero que você nunca esqueça:
 Existe alguém pensando em você.
 Existe alguém torcendo por você.
-Existe alguém que te ama profundamente.
-Esse alguém sou eu.
-</p>
-
-<p>
-Você é e sempre será muito especial para mim, princesa.
-Eu amo cada detalhe seu.
-Eu amo sua companhia.
-Eu amo conversar com você.
-Eu amo fazer parte da sua vida.
-</p>
-
-<p>
-Que esse seja apenas mais um de muitos Dias dos Namorados que ainda vamos comemorar juntos.
-Que nosso amor continue crescendo.
-Que nossa história continue ficando cada vez mais bonita.
+Existe alguém que sente sua falta.
+Existe alguém que te ama muito.
+E esse alguém sou eu.
 </p>
 
 <p>
@@ -147,33 +179,50 @@ Vou te amar depois de amanhã.
 E vou continuar te amando por todos os dias que eu puder.
 </p>
 
-<h2 style="text-align:center;color:#ff4d88;">
-❤️ Feliz Dia dos Namorados, Princesa ❤️
-</h2>
+<h2 style="color:#ff4d88;">❤️ Feliz Dia dos Namorados, Princesa ❤️</h2>
 
-<h3 style="text-align:center;">
+<h3>
 Com todo meu amor,<br>
 Seu namorado Duzin ❤️
 </h3>
 
 </div>
 
+</div>
+
 <script>
-let p = 0;
-let barra = document.getElementById("barra");
-let txt = document.getElementById("porcentagem");
+let p=0;
+let barra=document.getElementById("barra");
+let txt=document.getElementById("porcentagem");
 
-let carregar = setInterval(() => {
+let carregar=setInterval(()=>{
 p++;
-barra.style.width = p + "%";
-txt.innerHTML = p + "%";
 
-if(p >= 100){
+barra.style.width=p+"%";
+txt.innerHTML=p+"%";
+
+if(p>=100){
 clearInterval(carregar);
-txt.innerHTML = "Presente carregado ❤️";
-document.getElementById("carta").style.display = "block";
+txt.innerHTML="Presente carregado ❤️";
+document.getElementById("carta").style.display="block";
 }
-}, 50);
+},50);
+
+setInterval(()=>{
+let heart=document.createElement("div");
+
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(20+Math.random()*20)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+
+},300);
 </script>
 
 </body>
