@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>💖 Para Minha Princesa 💖</title>
+<title>❤️ Para Maria Eduarda ❤️</title>
 
 <style>
 
@@ -18,7 +18,7 @@ font-family:Arial,sans-serif;
 body{
 background:linear-gradient(180deg,#ffb6c1,#ffd6e7);
 overflow-x:hidden;
-color:#fff;
+min-height:100vh;
 }
 
 #loading{
@@ -27,115 +27,171 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:#ff8fb1;
+background:linear-gradient(180deg,#ff4d88,#ff8fb1);
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 z-index:99999;
+color:white;
 }
 
 #loading h1{
-font-size:30px;
-animation:pulse 1.2s infinite;
+font-size:32px;
+text-align:center;
+animation:pulse 1.5s infinite;
+padding:20px;
 }
 
-.barra-bg{
+.loader{
 width:85%;
-height:30px;
-background:white;
-border-radius:30px;
+max-width:500px;
+height:28px;
+background:rgba(255,255,255,.3);
+border-radius:50px;
 overflow:hidden;
-margin-top:20px;
 }
 
-.barra{
+.loader-bar{
 height:100%;
 width:0%;
-background:#ff3d7f;
-border-radius:30px;
+background:white;
+border-radius:50px;
 }
 
-#porcentagem{
+#percent{
 margin-top:15px;
-font-size:20px;
+font-size:22px;
 font-weight:bold;
 }
 
 @keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.1);}
-100%{transform:scale(1);}
+50%{
+transform:scale(1.05);
+}
 }
 
 #conteudo{
 display:none;
-padding:20px;
-max-width:900px;
+max-width:1000px;
 margin:auto;
+padding:20px;
+position:relative;
+z-index:2;
 }
 
 .titulo{
 text-align:center;
-font-size:40px;
-margin-top:30px;
+font-size:42px;
+color:white;
+font-weight:bold;
+text-shadow:0 0 20px white;
+animation:brilho 2s infinite;
+margin-top:20px;
+}
+
+@keyframes brilho{
+50%{
+text-shadow:0 0 35px white;
+}
+}
+
+.nome{
+text-align:center;
+font-size:36px;
+color:white;
+margin-top:20px;
+font-weight:bold;
 animation:pulse 2s infinite;
-text-shadow:0 0 15px white;
 }
 
 .contador{
 background:rgba(255,255,255,.25);
 backdrop-filter:blur(8px);
-padding:20px;
+padding:25px;
 border-radius:20px;
 margin:25px 0;
 text-align:center;
-font-size:25px;
+color:white;
+font-size:24px;
 font-weight:bold;
 }
 
 .carta{
 background:white;
-color:#444;
 padding:30px;
 border-radius:25px;
-box-shadow:0 0 25px rgba(0,0,0,.15);
-line-height:1.9;
+box-shadow:0 0 20px rgba(0,0,0,.1);
+line-height:2;
 font-size:20px;
+color:#444;
 }
 
-.heart{
+.carta h2{
+text-align:center;
+color:#ff4d88;
+margin-bottom:25px;
+}
+
+.coracao{
 position:fixed;
-top:-20px;
+top:-50px;
+pointer-events:none;
 animation:cair linear forwards;
-z-index:9999;
+z-index:1;
 }
 
 @keyframes cair{
 to{
-transform:translateY(110vh);
+transform:translateY(120vh);
 opacity:0;
 }
 }
 
-.star{
+.estrela{
 position:fixed;
-color:white;
+pointer-events:none;
 animation:piscar 2s infinite;
+z-index:0;
 }
 
 @keyframes piscar{
-0%{opacity:.2;}
-50%{opacity:1;}
-100%{opacity:.2;}
+50%{
+opacity:.2;
+}
+}
+
+#amorBtn{
+background:#ff4d88;
+color:white;
+border:none;
+padding:20px 40px;
+font-size:24px;
+border-radius:40px;
+cursor:pointer;
+display:block;
+margin:40px auto;
+animation:pulse 1.5s infinite;
+}
+
+.surpresa{
+display:none;
+background:white;
+padding:30px;
+border-radius:25px;
+margin-top:30px;
+text-align:center;
+color:#ff4d88;
+font-size:22px;
+line-height:2;
 }
 
 .assinatura{
 text-align:center;
-font-size:28px;
 margin-top:40px;
-color:#ff4d88;
+font-size:28px;
 font-weight:bold;
+color:#ff4d88;
 }
 
 </style>
@@ -145,221 +201,97 @@ font-weight:bold;
 
 <div id="loading">
 
-<h1>💖 Carregando seu presente, Princesa... 💖</h1>
+<h1>
+💖 Carregando seu presente, Maria Eduarda... 💖
+</h1>
 
-<div class="barra-bg">
-<div class="barra" id="barra"></div>
+<div class="loader">
+<div class="loader-bar" id="barra"></div>
 </div>
 
-<p id="porcentagem">0%</p>
+<p id="percent">0%</p>
 
 </div>
 
 <div id="conteudo">
 
 <h1 class="titulo">
-💖 Para Minha Princesa 💖
+💖 Feliz Dia dos Namorados 💖
 </h1>
 
-<div class="contador" id="contador"></div>
+<div class="nome">
+❤️ Maria Eduarda ❤️
+</div>
+
+<div class="contador" id="contador">
+Calculando nosso tempo juntos...
+</div>
 
 <div class="carta">
-    <h2 style="text-align:center;color:#ff4d88;">
-💌 Feliz Dia dos Namorados, Minha Princesa 💌
-</h2>
 
-<br>
-
+<h2>💌 Para Minha Princesa 💌</h2>
 <p>
-Minha princesa,
-hoje é Dia dos Namorados e eu queria encontrar as palavras perfeitas para te mostrar tudo o que sinto por você.
-Mas a verdade é que nem a maior carta do mundo seria capaz de explicar completamente o tamanho do amor que tenho por você.
+Minha princesa Maria Eduarda,
+se você está lendo isso agora,
+quero que saiba que cada palavra desta carta foi escrita pensando em você.
 </p>
 
-<br>
+<p>
+Hoje é Dia dos Namorados e, mesmo com a distância entre nós,
+meu coração encontrou uma forma de estar pertinho do seu.
+</p>
+
+<p>
+Talvez eu não possa te abraçar agora.
+Talvez eu não possa segurar sua mão neste momento.
+Mas existe algo que nem a distância consegue separar:
+o amor que eu sinto por você.
+</p>
 
 <p>
 Desde o dia 09/01/2026,
-minha vida mudou de uma forma que eu nunca imaginei.
-Foi nesse dia que começou uma das histórias mais bonitas da minha vida.
-Uma história que me trouxe alegria, carinho, amor, companheirismo e muitos sonhos.
+minha vida mudou completamente.
+Você trouxe felicidade para dias comuns.
+Você trouxe luz para momentos difíceis.
+Você trouxe amor para um coração que nem imaginava sentir algo tão forte.
 </p>
-
-<br>
-
-<p>
-Você entrou na minha vida e transformou dias comuns em dias especiais.
-Transformou momentos simples em lembranças inesquecíveis.
-Transformou a saudade em prova de amor.
-E transformou meu coração em um lugar onde você sempre terá morada.
-</p>
-
-<br>
-
-<p>
-Mesmo com a distância entre nós,
-você consegue estar presente em todos os momentos do meu dia.
-Quando eu acordo penso em você.
-Quando algo bom acontece penso em você.
-Quando sinto saudade penso em você.
-Antes de dormir penso em você.
-</p>
-
-<br>
 
 <p>
 Você se tornou meu pensamento favorito.
-Meu sorriso favorito.
-Meu lugar favorito.
-Meu amor favorito.
+A primeira pessoa em quem eu penso quando acordo.
+E a última pessoa que passa pela minha mente antes de eu dormir.
 </p>
-
-<br>
-
-<p>
-Princesa,
-existem dias em que tudo o que eu queria era atravessar qualquer distância apenas para te dar um abraço.
-Um abraço daqueles demorados,
-que fazem o mundo inteiro desaparecer por alguns segundos.
-</p>
-
-<br>
-
-<p>
-Existem dias em que eu queria segurar sua mão,
-olhar nos seus olhos
-e dizer pessoalmente o quanto você é importante para mim.
-</p>
-
-<br>
-
-<p>
-Mas mesmo longe,
-eu nunca deixo de sentir você perto.
-Porque o amor que existe entre nós é maior que qualquer quilômetro.
-</p>
-
-<br>
-
-<p>
-Você me faz feliz de um jeito que ninguém mais consegue.
-Seu carinho me acalma.
-Sua atenção me faz sentir especial.
-Sua presença ilumina meus dias.
-</p>
-
-<br>
 
 <p>
 Eu amo conversar com você.
 Amo ouvir sua voz.
-Amo nossas risadas.
 Amo nossas brincadeiras.
-Amo nossos momentos juntos.
+Amo nossas risadas.
+Amo os pequenos momentos que passamos juntos.
 </p>
-
-<br>
 
 <p>
-E sabe o que eu mais amo?
-O fato de poder chamar você de meu amor.
+Mesmo longe,
+você consegue me fazer sentir acolhido.
+Você consegue me fazer sorrir.
+Você consegue fazer meu coração acelerar.
 </p>
-
-<br>
 
 <p>
-Obrigado por existir.
-Obrigado por me ouvir.
-Obrigado por me apoiar.
-Obrigado por me compreender.
-Obrigado por me amar.
+Existem dias em que a saudade aperta muito.
+Dias em que tudo o que eu queria era atravessar qualquer distância só para te dar um abraço.
 </p>
-
-<br>
 
 <p>
-Você é uma pessoa incrível.
-Tem um coração lindo.
-Tem uma força enorme.
-Tem uma beleza que vai muito além da aparência.
+Mas sabe de uma coisa?
+Toda essa saudade apenas me faz perceber o quanto você é especial para mim.
 </p>
-
-<br>
 
 <p>
-Você é especial.
-Você é única.
-Você é importante.
-Você é a minha princesa.
+Porque quando sentimos falta de alguém,
+é porque essa pessoa ocupa um espaço enorme dentro do nosso coração.
+E você ocupa um espaço gigante dentro do meu.
 </p>
-
-<br>
-
-<p>
-Mesmo quando a saudade aperta,
-ela apenas me lembra o quanto você significa para mim.
-O quanto você faz falta.
-O quanto eu quero viver muitos momentos ao seu lado.
-</p>
-
-<br>
-
-<p>
-E eu prometo continuar cuidando de você,
-continuar te apoiando,
-continuar te fazendo sorrir sempre que eu puder.
-</p>
-
-<br>
-
-<p>
-Porque amar você é uma das melhores coisas que já aconteceram na minha vida.
-</p>
-
-<br>
-
-<p>
-
-</p>
-<p>
-Meu amor,
-quando eu penso no futuro,
-eu penso em você.
-Penso nos abraços que ainda vamos dar.
-Penso nos passeios que ainda vamos fazer.
-Penso nas risadas que ainda vamos compartilhar.
-Penso nos sonhos que ainda vamos realizar juntos.
-</p>
-
-<br>
-
-<p>
-Você é alguém que eu quero ter ao meu lado em todos os momentos.
-Nos dias felizes.
-Nos dias difíceis.
-Nas conquistas.
-Nos desafios.
-Em tudo.
-</p>
-
-<br>
-
-<p>
-Porque você se tornou uma parte muito importante da minha vida.
-Uma parte que eu não quero perder.
-Uma parte que eu quero cuidar todos os dias.
-</p>
-
-<br>
-
-<p>
-Eu escolheria você hoje.
-Escolheria você amanhã.
-Escolheria você daqui a um ano.
-E escolheria você em todas as oportunidades que a vida me desse.
-</p>
-
-<br>
 
 <p>
 Você é minha princesa.
@@ -369,53 +301,148 @@ Meu pensamento favorito.
 Meu lugar favorito.
 </p>
 
-<br>
-
 <p>
-Nunca esqueça:
-Existe alguém pensando em você agora.
-Existe alguém sentindo sua falta.
-Existe alguém torcendo pela sua felicidade.
-Existe alguém que te ama profundamente.
-</p>
-
-<br>
-
-<p>
-E esse alguém sou eu.
-</p>
-
-<br>
-
-<p>
+Obrigado por existir.
+Obrigado por me ouvir.
+Obrigado por me entender.
+Obrigado por me apoiar.
 Obrigado por fazer parte da minha vida.
-Obrigado por cada momento.
-Obrigado por cada conversa.
-Obrigado por cada ligação.
-Obrigado por cada sorriso.
 </p>
-
-<br>
 
 <p>
-Que este seja apenas mais um de muitos Dias dos Namorados que ainda vamos viver juntos.
-Que nossa história continue crescendo.
-Que nosso amor continue ficando cada vez mais forte.
+Se eu pudesse escolher um lugar para estar agora,
+eu escolheria qualquer lugar onde você estivesse.
+Porque para mim,
+o melhor lugar do mundo sempre será ao seu lado.
 </p>
-
-<br>
 
 <p>
-Eu te amo hoje.
-Vou te amar amanhã.
-Vou te amar depois de amanhã.
-E vou continuar te amando em todos os dias que vierem depois.
+E essa é apenas a primeira parte do que eu quero te dizer...
 </p>
 
-<br>
+<h2 style="margin-top:40px;">
+🌹 Capítulo 2 - O Que Você Mudou Em Mim 🌹
+</h2>
 
-<h2 style="text-align:center;color:#ff4d88;">
-❤️ Feliz Dia dos Namorados, Minha Princesa ❤️
+<p>
+Antes de você,
+eu não imaginava que alguém pudesse transformar tanto os meus dias.
+</p>
+
+<p>
+Mas você conseguiu.
+Com seu jeito.
+Com seu carinho.
+Com sua atenção.
+Com sua presença.
+</p>
+
+<p>
+Você me ensinou que amar alguém é querer ver essa pessoa feliz todos os dias.
+</p>
+
+<p>
+Você me ensinou que distância não significa ausência.
+Porque mesmo longe,
+você está presente em todos os meus pensamentos.
+</p>
+
+<p>
+Você me mostrou que o amor verdadeiro não depende de quilômetros.
+Ele depende de sentimento.
+E o que eu sinto por você cresce a cada dia.
+</p>
+
+<p>
+
+</p>
+<h2 style="margin-top:40px;">
+✨ Capítulo 3 - Mesmo Com a Distância ✨
+</h2>
+
+<p>
+Meu amor, às vezes a distância é difícil.
+Existem momentos em que tudo o que eu queria era estar aí com você.
+Poder te abraçar.
+Poder segurar sua mão.
+Poder olhar nos seus olhos.
+</p>
+
+<p>
+Mas mesmo longe, nunca me sinto distante do seu coração.
+Porque você está comigo em cada mensagem, em cada ligação e em cada lembrança.
+</p>
+
+<p>
+A distância só me faz ter mais certeza de que você vale a pena.
+Vale cada segundo de espera.
+Vale cada momento de saudade.
+Vale cada esforço.
+</p>
+
+<h2 style="margin-top:40px;">
+💖 Capítulo 4 - Nossos Sonhos 💖
+</h2>
+
+<p>
+Eu sonho com o dia em que não precisaremos mais sentir saudade.
+O dia em que os abraços substituirão as chamadas.
+O dia em que poderei te olhar e dizer pessoalmente tudo isso.
+</p>
+
+<p>
+Sonho com os momentos simples.
+Com as risadas.
+Com os passeios.
+Com as fotos.
+Com todas as lembranças que ainda vamos construir juntos.
+</p>
+
+<h2 style="margin-top:40px;">
+👑 Capítulo 5 - O Que Eu Sinto Por Você 👑
+</h2>
+
+<p>
+O que eu sinto por você é difícil de explicar.
+Porque é muito maior do que palavras.
+</p>
+
+<p>
+É carinho.
+É admiração.
+É saudade.
+É felicidade.
+É paz.
+É amor.
+</p>
+
+<p>
+Você é uma das melhores coisas que já aconteceram na minha vida.
+E eu agradeço todos os dias por ter você.
+</p>
+
+<h2 style="margin-top:40px;">
+🌹 Capítulo 6 - Nosso Futuro 🌹
+</h2>
+
+<p>
+Eu quero continuar construindo nossa história.
+Quero viver muitos momentos ao seu lado.
+Quero celebrar muitas datas especiais com você.
+</p>
+
+<p>
+E quero que você saiba que sempre terá alguém torcendo pela sua felicidade.
+Sempre terá alguém acreditando em você.
+Sempre terá alguém te amando.
+</p>
+
+<p>
+Esse alguém sou eu. ❤️
+</p>
+
+<h2 style="text-align:center;margin-top:50px;color:#ff4d88;">
+💌 Feliz Dia dos Namorados, Minha Princesa 💌
 </h2>
 
 <div class="assinatura">
@@ -423,53 +450,107 @@ Com todo meu amor,<br><br>
 Seu namorado Duzin ❤️
 </div>
 
+<button id="amorBtn">
+❤️ EU TE AMO ❤️
+</button>
+
+<div class="surpresa" id="surpresa">
+
+<h2>🎁 Surpresa Final 🎁</h2>
+
+<p>
+Maria Eduarda,
+se você chegou até aqui,
+quero que saiba que este presente não representa nem 1% do amor que eu sinto por você.
+</p>
+
+<p>
+Obrigado por cada conversa.
+Obrigado por cada sorriso.
+Obrigado por cada momento.
+Obrigado por existir.
+</p>
+
+<p>
+Eu te amo hoje.
+Vou te amar amanhã.
+Vou te amar depois de amanhã.
+E vou continuar te amando por todos os dias que Deus me permitir.
+</p>
+
+<p>
+❤️ Você é e sempre será minha princesa. ❤️
+</p>
+
+<p>
+Com amor,<br>
+Seu namorado Duzin ❤️
+</p>
+
 </div>
 
+</div>
 </div>
 
 <script>
 
-let porcentagem = 0;
-let barra = document.getElementById("barra");
-let texto = document.getElementById("porcentagem");
+let progresso = 0;
 
-let carregando = setInterval(() => {
+const barra = document.getElementById("barra");
+const percent = document.getElementById("percent");
 
-porcentagem++;
+const loading = setInterval(() => {
 
-barra.style.width = porcentagem + "%";
-texto.innerHTML = porcentagem + "%";
+progresso++;
 
-if(porcentagem >= 100){
+barra.style.width = progresso + "%";
+percent.innerHTML = progresso + "%";
 
-clearInterval(carregando);
+if(progresso >= 100){
+
+clearInterval(loading);
 
 document.getElementById("loading").style.display = "none";
 document.getElementById("conteudo").style.display = "block";
 
 }
 
-},40);
+},35);
 
-const inicio = new Date("2026-01-09");
-const hoje = new Date();
+function atualizarContador(){
 
-const diferenca = hoje - inicio;
+const inicio = new Date("2026-01-09T00:00:00");
+const agora = new Date();
+
+const diferenca = agora - inicio;
+
 const dias = Math.floor(diferenca / (1000*60*60*24));
+const horas = Math.floor((diferenca % (1000*60*60*24)) / (1000*60*60));
+const minutos = Math.floor((diferenca % (1000*60*60)) / (1000*60));
+const segundos = Math.floor((diferenca % (1000*60)) / 1000);
 
 document.getElementById("contador").innerHTML =
-"⏳ Estamos juntos há " + dias + " dias ❤️";
+`❤️ Estamos juntos há <br>
+${dias} dias ❤️<br>
+${horas} horas 💕<br>
+${minutos} minutos 💖<br>
+${segundos} segundos 💘`;
 
-for(let i=0;i<50;i++){
+}
 
-let estrela = document.createElement("div");
+setInterval(atualizarContador,1000);
+atualizarContador();
 
-estrela.className = "star";
+for(let i=0;i<60;i++){
+
+const estrela = document.createElement("div");
+
+estrela.className = "estrela";
 estrela.innerHTML = "✨";
 
 estrela.style.left = Math.random()*100 + "vw";
 estrela.style.top = Math.random()*100 + "vh";
-estrela.style.fontSize = (10 + Math.random()*15) + "px";
+estrela.style.fontSize = (10 + Math.random()*20) + "px";
 
 document.body.appendChild(estrela);
 
@@ -477,23 +558,52 @@ document.body.appendChild(estrela);
 
 setInterval(()=>{
 
-let coracao = document.createElement("div");
+const coracao = document.createElement("div");
 
-coracao.className = "heart";
+coracao.className = "coracao";
 coracao.innerHTML = "❤️";
 
 coracao.style.left = Math.random()*100 + "vw";
-coracao.style.fontSize = (20 + Math.random()*20) + "px";
-coracao.style.animationDuration =
-(3 + Math.random()*3) + "s";
+coracao.style.fontSize = (18 + Math.random()*20) + "px";
+coracao.style.animationDuration = (5 + Math.random()*4) + "s";
 
 document.body.appendChild(coracao);
 
 setTimeout(()=>{
 coracao.remove();
-},6000);
+},9000);
 
-},250);
+},400);
+
+document.getElementById("amorBtn").onclick = function(){
+
+document.getElementById("surpresa").style.display = "block";
+
+for(let i=0;i<50;i++){
+
+const h = document.createElement("div");
+
+h.innerHTML = "❤️";
+h.style.position = "fixed";
+h.style.left = Math.random()*100 + "vw";
+h.style.top = "100vh";
+h.style.fontSize = "35px";
+h.style.zIndex = "99999";
+h.style.transition = "3s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.style.top = "-100px";
+},50);
+
+setTimeout(()=>{
+h.remove();
+},3000);
+
+}
+
+};
 
 </script>
 
